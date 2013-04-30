@@ -8,6 +8,12 @@ Response: <%= @response %>
 <br>
 Result: 
 <br>
+<% @result %>
+
+<br>
+<br>
+<br>
+
 <% @result["data"].each do |p| %>
 <img src="<%= p["images"]["thumbnail"]["url"] %>" />
  <% end %>

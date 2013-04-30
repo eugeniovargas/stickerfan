@@ -11,7 +11,7 @@ class UserController < ActionController::Base
                     
     @response = HTTParty.post("https://api.instagram.com/oauth/access_token", info)
     
-    @result = HTTParty.get("https://api.instagram.com/v1/users/#{@response["user"]["id"]}/media/recent/?access_token=#{@response["access_token"]}&count=-1")
+    @result = HTTParty.get("https://api.instagram.com/v1/users/#{@response["user"]["id"]}/media/recent/?access_token=#{@response["access_token"]}&count=12")
 
   end  
 end

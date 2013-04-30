@@ -7,6 +7,7 @@ Stickerfan::Application.routes.draw do
   
   # resources.
   resources :user
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

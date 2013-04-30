@@ -1,0 +1,35 @@
+.masthead {
+  background-color: #ecf0f5;
+  padding: 20px 0;
+}
+.round-front{
+  background-color: #ecf0f5;
+  border-radius: 12px;
+  padding: 15px;
+}
+.img-illustration{
+  height: 100px;
+  margin: 31px 0 27px;
+  vertical-align: bottom;
+}
+.jumbotron {
+  margin: 30px 0;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+  text-align: center;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
