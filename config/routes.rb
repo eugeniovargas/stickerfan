@@ -6,8 +6,14 @@ Stickerfan::Application.routes.draw do
   root to: 'application#index'
   
   # resources.
-  resources :user
+  get 'user' => 'user#index'  
+  get 'user/connect' => 'user#connect'
   
+  get 'user/instagram' => 'user#instagram_auth'
+  
+  get 'user/instagram/photos' => 'user#photos'
+
+  #get 'user/photos' => 'user#photos', :as => 'photos'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

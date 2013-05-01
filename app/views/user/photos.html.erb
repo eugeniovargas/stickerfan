@@ -1,1 +1,32 @@
-<h1>Yay</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h3>Elige tus fotos!</h3>
+  </div>
+
+  <div class="row-fluid marketing">
+    <div class="span7">
+      <div class="demo-browser">
+        <div class="demo-browser-side">
+          <div class="demo-browser-author">
+            <img src="<%= @profile %> "/>
+          </div>
+          <h5>@USER</h5>
+        </div>
+        <div class="demo-browser-content">
+          <% @images.each do |i| %>
+            <img src="<%= i %>" />
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="span4">
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p>&copy; PegaStickers 2013</p>
+  </div>
+</div>
