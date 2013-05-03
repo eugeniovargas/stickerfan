@@ -1,4 +1,3 @@
-stickerfan
+Stickerfan  [![Code Climate](https://codeclimate.com/github/eugeniovargas/stickerfan.png)](https://codeclimate.com/github/eugeniovargas/stickerfan)
 ==========
-
-fan for fun
+TODO
