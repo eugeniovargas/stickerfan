@@ -503,8 +503,7 @@ h6 {
   .logo {
     background-image: url("../images/demo/logo-mask-2x.png"); }
 
-  .demo-browser {
-    background-image: url("../images/demo/browser-2x.png"); } }
+  .demo-browser { } }
 .navbar {
   font-size: 18px; }
   .navbar .brand {

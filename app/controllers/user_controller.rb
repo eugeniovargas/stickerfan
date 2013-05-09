@@ -26,6 +26,8 @@ class UserController < ActionController::Base
 
     @profile = @response["user"]["profile_picture"]
     
+    @user_name = @response["user"]["username"]
+    
     @images = []
     
     @result["data"].each do |p|

@@ -28,9 +28,39 @@
 
 /* Supporting marketing content */
 .marketing {
-  margin: 60px 0;
   text-align: center;
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+#photos span { display: none;
+  background-color: #333;
+  background-color: rgba(51,51,51,0.95);
+  width: 141px;
+  height: 141px;
+  margin: 0px 0px 0px -161px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;}
+#photos span a{
+  margin: 55px 0 0 40px;
+  float: left;
+  border: 1px #666 solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+#cart {width: 500px;
+  background: #cccccc;
+  position: fixed;
+  height: 500px;
+  -webkit-border-radius: 15px;
+}
+.grid img{
+  width: 110px;
+  padding: 5px;
+  z-index: -1;      
+}
+.hover{
+  content: url(/images/delete-img.png);
 }
