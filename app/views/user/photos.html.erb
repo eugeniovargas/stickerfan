@@ -1,20 +1,17 @@
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script>
   $(function() {
-    $( "#photos img").draggable({
-      helper: "clone"
-    });
-    $( "#cart").droppable({
-      activeClass: "drop-active",
-      hoverClass: "drop-hover",
-      accept: ".photo",
-      tolerance: "fit"
+    $('#photos > img').click(function(){ 
+      $(this).clone().prependTo('#cart .grid');
+      $(".grid img").click(function(){ $(this).fadeOut() });
     });
   });
+     
   </script>
+  
   <style>
     #photos { float:left;}
-    #cart { float: right;width: 500px;background: #cccccc;height: 500px;position: fixed;-webkit-border-radius: 15px; }
+    #cart {width: 500px;background: #cccccc;height: 500px;-webkit-border-radius: 15px; }
   </style>
 
 <div class="container">
@@ -41,6 +38,8 @@
     <div class="span4">
       <div id="cart">
         <h4 class="ui-widget-header"><span class=""></span>Tu Pedido</h4>
+        <div class="grid">
+        </div>
       </div>
     </div>
 
