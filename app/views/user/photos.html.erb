@@ -1,16 +1,46 @@
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script>
   $(function() {
-    $('#photos > img').click(function(){ 
-      $(this).clone().prependTo('#cart .grid');
-      $(".grid img").click(function(){ $(this).fadeOut() });
+    $('#photos > img').hover(function(){
+      $(this).next(".add-photo").show();
+    });
+    
+    $('#photos > span').mouseout(function(){
+      $(this).hide();
+    });
+
+    $('#photos > span a').mouseenter(function(){
+      $(this).parent().show();
+    });
+
+    $('#photos > span a').click(function(){ 
+      $(this).parent().next().clone().prependTo('#cart .grid');
+      $(".grid img").click(function(){
+        $(this).fadeOut() 
+      });
     });
   });
      
   </script>
   
   <style>
-    #photos { float:left;}
+    #photos span { display: none;
+      background-color: #333;
+      background-color: rgba(51,51,51,0.95);
+      width: 141px;
+      height: 141px;
+      margin: 0px 0px 0px -161px;
+      float: left;
+      text-align: center;
+      cursor: pointer;
+      -webkit-user-select: none;}
+    #photos span a{
+      margin: 55px 0 0 40px;
+      float: left;
+      border: 1px #666 solid;
+      padding: 5px;
+      border-radius: 5px;
+    }
     #cart {width: 500px;background: #cccccc;height: 500px;-webkit-border-radius: 15px; }
   </style>
 
@@ -31,7 +61,8 @@
         <div id="photos" class="demo-browser-content">
           <% @images.each do |i| %>
             <img src="<%= i %>" class="photo" />
-          <% end %>
+            <span class="add-photo"><a class="add-photo-button">Agregar</a></span>
+            <% end %>
         </div>
       </div>
     </div>
